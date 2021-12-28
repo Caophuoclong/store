@@ -1,0 +1,196 @@
+@import '_library';
+
+body {
+  font-size: 1.8rem;
+  position: relative;
+  min-width: 640px;
+}
+.textPrimary {
+  color: $primaryColor;
+  margin-left: 2rem;
+}
+a {
+  color: black;
+  &:visited {
+    color: black;
+  }
+}
+nav {
+  background-color: $primaryBackground;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    margin-right: 1rem;
+    padding: 0.5rem 0;
+
+    li {
+      list-style-type: none;
+      margin: 0px 5px;
+      padding: 0.3rem 1rem;
+      border-radius: 1rem;
+      user-select: none;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.5);
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+      a {
+        text-decoration: none;
+        color: rgba(241, 238, 238, 0.849) !important;
+        font-weight: 700;
+        &:hover {
+          color: blue;
+        }
+        &:visited {
+          color: black;
+        }
+      }
+    }
+  }
+}
+header,
+main {
+  width: 80%;
+  margin: 0.5rem auto;
+}
+footer {
+  background-color: $primaryBackground;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 12px;
+      margin-right: 0.5rem;
+    }
+    span {
+      font-weight: 700;
+      font-style: italic;
+    }
+  }
+  .searchContainer {
+    width: 60%;
+    display: flex;
+    position: relative;
+    box-shadow: $shadow1;
+    border-radius: 3rem;
+    .search {
+      width: 90%;
+      margin: 0 0.5rem;
+      border: none;
+      padding: 0.5rem;
+      outline: none;
+      font-size: 2rem;
+      background-color: transparent;
+    }
+    .searchIcon {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primaryBackground;
+      width: 3rem;
+      height: 3rem;
+      right: 1rem;
+      top: -0.7rem;
+      outline: none;
+      border: none;
+      border-radius: 1rem;
+      color: whitesmoke;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.cartBtn {
+  display: flex;
+  width: 3rem;
+  position: relative;
+  padding: 0.7rem;
+  border-radius: 100rem;
+  user-select: none;
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+    background-color: rgb(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+  .quantity {
+    position: absolute;
+    right: 0;
+    transform: translateX(30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primaryBackground;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 100rem;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+}
+.imgSlider {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 1.2rem;
+  margin: 0 auto;
+}
+.itemSlider {
+  box-shadow: $shadow1;
+  padding: 2rem;
+  margin: 0 2rem !important;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: black;
+}
+.truncate {
+  width: 19rem;
+  white-space: wrap;
+  overflow: hidden;
+  // text-overflow: ellipsis;
+}
+button {
+  cursor: pointer;
+  &:active {
+    transform: scale(0.8);
+  }
+}
+.toTop {
+  position: fixed;
+  bottom: 1rem;
+  right: 3rem;
+  background-color: transparent;
+  border: none;
+  z-index: 100;
+  transition: all 1s;
+}
+
+.cartMove {
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+}
+svg {
+  cursor: default;
+  pointer-events: none;
+}
