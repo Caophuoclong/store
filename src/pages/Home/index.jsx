@@ -3,7 +3,7 @@ import { useStore } from 'StoreContext';
 
 import SlickCarousel from 'components/SlickCarousel';
 import Products from 'components/Products';
-
+import { toast } from 'react-toastify';
 const Index = () => {
   const [state, dispatch] = useStore();
   return (

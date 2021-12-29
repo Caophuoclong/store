@@ -4,8 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom"
+import { toast } from "react-toastify"
 import GlobalStyle from "Global"
 import { StoreProvider } from "StoreContext";
+toast.configure({
+  autoClose: 1000,
+  draggable: true,
+  position: "top-right",
+
+  //etc you get the idea
+});
 
 ReactDOM.render(
   <React.StrictMode>

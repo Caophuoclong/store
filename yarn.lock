@@ -6866,7 +6866,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2:
+prop-types@^15.5.8, prop-types@^15.7.2:
   version "15.8.0"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.0.tgz"
   integrity sha512-fDGekdaHh65eI3lMi5OnErU6a8Ighg2KjcjQxO7m8VHyWjcPyj5kiOgV1LQDOOOgVy3+5FgjXvdSSX7B8/5/4g==
@@ -7012,6 +7012,25 @@ react-icons@^4.3.1:
   version "4.3.1"
   resolved "https://registry.npmjs.org/react-icons/-/react-icons-4.3.1.tgz"
   integrity sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==
+
+react-infinite-scroll-hook@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-infinite-scroll-hook/-/react-infinite-scroll-hook-4.0.1.tgz#0fea9de7a84764975aad1209baeff286681d83b9"
+  integrity sha512-UzRt1TPLnWV8TZ6Yw2k5vuVZX/d/gOm2NB1hrp48iTcVwV/4dSsUFDsnwrdTqioSl2n6wz2kfo8BowOczsaJRw==
+  dependencies:
+    react-intersection-observer-hook "^2.0.3"
+
+react-infinite-scroller@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/react-infinite-scroller/-/react-infinite-scroller-1.2.4.tgz#f67eaec4940a4ce6417bebdd6e3433bfc38826e9"
+  integrity sha512-/oOa0QhZjXPqaD6sictN2edFMsd3kkMiE19Vcz5JDgHpzEJVqYcmq+V3mkwO88087kvKGe1URNksHEOt839Ubw==
+  dependencies:
+    prop-types "^15.5.8"
+
+react-intersection-observer-hook@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer-hook/-/react-intersection-observer-hook-2.0.3.tgz#de6a1fb00ffac1acee651e908e7e17e0eff1e8b6"
+  integrity sha512-6LcrY/oUtZqn7HbwLTgSk43/KdZD5LZJsWUOwQB11aMPi3OkjyDcm2dwAQ1ydlbrSDlL4fHUNXisNt4B470UJg==
 
 react-is@^16.13.1:
   version "16.13.1"

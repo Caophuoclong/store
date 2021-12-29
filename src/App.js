@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import axios from "axios"
+import 'react-toastify/dist/ReactToastify.css';
 
 import { useStore, actions } from "StoreContext";
 
@@ -36,6 +37,7 @@ function App() {
     };
     window.addEventListener('scroll', handleScroll);
   }, []);
+
   return (
     <div>
       <Nav />
@@ -51,6 +53,7 @@ function App() {
         <Route path="/warranty" element={<WarrantyPage />} />
       </Routes>
       <Footer />
+
     </div>
   );
 }

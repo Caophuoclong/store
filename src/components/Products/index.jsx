@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import clsx from 'clsx';
 import { FaCartPlus, FaCartArrowDown } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 import styles from './Product.module.css';
 import { useStore, actions } from 'StoreContext';
-const Index = ({ children }) => {
+const Index = ({ children }, ref) => {
   const [state, dispatch] = useStore();
   const productList = clsx(styles.productList);
   const product = clsx(styles.product);
@@ -16,12 +17,13 @@ const Index = ({ children }) => {
   const btnTitle = clsx(styles.btnTitle);
   const handleAddToCart = (item) => {
     dispatch(actions.addToCart(item));
+    toast.success('🦄 Wow so easy!');
   };
   const handleBuyNow = (id) => {};
   return (
-    <div className={productList}>
+    <ul ref={ref} className={productList}>
       {children.map((item, index) => (
-        <div key={index} className={product} title={item.title}>
+        <li key={index} className={product} title={item.title}>
           <div className={btnFn}>
             <button className={btn}>
               <FaCartArrowDown size="1.5rem" />
@@ -51,10 +53,10 @@ const Index = ({ children }) => {
             {item.title}
           </span>
           <span className={price}>{item.price}$</span>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
-export default Index;
+export default forwardRef(Index);
